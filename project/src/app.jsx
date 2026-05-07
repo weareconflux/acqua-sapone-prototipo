@@ -5,7 +5,7 @@ const { useState: useStateRoot, useEffect: useEffectRoot } = React;
 // Default tweakable values (persisted via __edit_mode_set_keys)
 const DEFAULTS = /*EDITMODE-BEGIN*/{
   "hero": "default",
-  "palette": "rosa",
+  "palette": "giallo",
   "density": "comfortable",
   "display": "montserrat"
 }/*EDITMODE-END*/;
@@ -99,7 +99,7 @@ function App() {
             <TweakRow label="Hero (home)" value={tweaks.hero} onChange={v => updateTweak('hero', v)}
               options={[['default','Default'],['split','Split'],['editorial','Editoriale']]} />
             <TweakRow label="Palette accento" value={tweaks.palette} onChange={v => updateTweak('palette', v)}
-              options={[['rosa','Rosa'],['blu','Blu']]} />
+              options={[['rosa','Rosa'],['blu','Blu'],['giallo','Giallo']]} />
             <TweakRow label="Densità layout" value={tweaks.density} onChange={v => updateTweak('density', v)}
               options={[['comfortable','Arioso'],['compact','Denso']]} />
             <TweakRow label="Font display" value={tweaks.display} onChange={v => updateTweak('display', v)}
