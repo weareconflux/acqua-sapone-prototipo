@@ -1,0 +1,210 @@
+/* ─────────────────────────────────────────────────────────────────
+   A&S Club — Acqua&Sapone Club Design System
+   Colors & Type tokens (extracted from Figma: "A&SClub _ WEB _ Shared")
+   ───────────────────────────────────────────────────────────────── */
+
+/* Montserrat is the primary type family (4 weights: 400, 500, 600, 700, 800)
+   Roboto Mono for tags/labels, Sora is used in the REDESIGN-2026 spec sheets. */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;700&family=Sora:wght@400;600;700;800&display=swap');
+/* Material Symbols for iconography (Figma uses Material Icons Outlined) */
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0');
+
+:root {
+  /* ─── Brand core ─────────────────────────────────────────────── */
+  --as-blu:            rgb(25, 73, 155);   /* Primary brand deep blue — buttons, H1, CTAs */
+  --as-blu-deep:       rgb(33, 58, 143);   /* Radial gradient anchor, navy accents */
+  --as-blu-dark:       rgb(15, 48, 117);   /* Deepest navy (headers behind photo) */
+  --as-blu-navy:       rgb(14, 65, 148);   /* Section title variant */
+  --as-cyan:           rgb(0, 172, 233);   /* Bubble primary cyan */
+  --as-cyan-bright:    rgb(0, 186, 238);   /* Bubble highlight cyan */
+  --as-cyan-mid:       rgb(110, 193, 228); /* Radial gradient mid-stop */
+  --as-cyan-soft:      rgb(149, 217, 245); /* Soft bubble blue */
+  --as-ice:            rgb(180, 225, 250); /* Ice blue — chip fills */
+  --as-sky-50:         rgb(226, 244, 252); /* Bubble bg (pre-login capsule) */
+  --as-sky-100:        rgb(226, 246, 255); /* Homepage radial gradient outer */
+  --as-sky-lo:         rgb(236, 247, 254); /* Faintest surface blue */
+
+  --as-rosa:           rgb(234, 42, 145);  /* Accent pink — "Rosa" buttons, scripted Club */
+  --as-rosa-deep:      rgb(220, 28, 131);  /* Pressed/filled pink variant */
+  --as-rosa-pink:      rgb(253, 168, 255); /* Soft pink, tags */
+  --as-rosa-50:        rgb(255, 238, 245); /* Pink surface tint */
+
+  --as-green:          rgb(35, 135, 25);   /* Success / "Terminato" badge */
+
+  /* ─── Neutrals ───────────────────────────────────────────────── */
+  --as-white:          rgb(255, 255, 255);
+  --as-bg-app:         rgb(234, 239, 241); /* Canvas behind screen frames */
+  --as-black:          rgb(3, 8, 17);      /* Body text ink */
+  --as-ink:            rgb(0, 0, 0);
+  --as-gray-900:       rgb(41, 44, 52);    /* Redesign dark surface */
+  --as-gray-700:       rgb(84, 89, 95);    /* Helper text, secondary */
+  --as-gray-500:       rgb(103, 108, 113); /* Placeholder text */
+  --as-gray-400:       rgb(187, 191, 195); /* Disabled/mute */
+  --as-gray-200:       rgb(232, 234, 235); /* Field fill, dividers */
+  --as-gray-100:       rgb(217, 217, 217); /* Subtle dividers */
+
+  /* ─── Semantic aliases ──────────────────────────────────────── */
+  --fg1:               var(--as-black);
+  --fg2:               var(--as-gray-700);
+  --fg3:               var(--as-gray-500);
+  --fg-brand:          var(--as-blu);
+  --fg-accent:         var(--as-rosa);
+  --fg-on-brand:       var(--as-white);
+
+  --bg1:               var(--as-white);
+  --bg2:               var(--as-sky-50);
+  --bg-app:            var(--as-bg-app);
+  --bg-brand:          var(--as-blu);
+  --bg-accent:         var(--as-rosa-deep);
+  --surface-field:     var(--as-gray-200);
+
+  --border-1:          var(--as-gray-200);
+  --border-brand:      var(--as-blu);
+
+  /* ─── Radii (extracted: 8, 12, 30, 56, 100, 1000) ───────────── */
+  --radius-xs:         4px;
+  --radius-sm:         8px;
+  --radius-md:         12px;
+  --radius-lg:         16px;
+  --radius-xl:         30px;   /* Cards */
+  --radius-pill-btn:   56px;   /* Buttons */
+  --radius-chip:       100px;  /* Tags & status chips */
+  --radius-capsule:    1000px; /* Full pill */
+
+  /* ─── Elevation ─────────────────────────────────────────────── */
+  --shadow-card:       0 4px 16px rgba(0, 0, 0, 0.1);     /* Standard card */
+  --shadow-soft:       0 2px 8px  rgba(0, 0, 0, 0.06);    /* Subtle lift */
+  --shadow-strong:     0 8px 24px rgba(25, 73, 155, 0.18);/* Brand lift */
+
+  /* ─── Spacing (8-pt) ────────────────────────────────────────── */
+  --sp-1:  4px;
+  --sp-2:  8px;
+  --sp-3:  12px;
+  --sp-4:  16px;
+  --sp-5:  20px;
+  --sp-6:  24px;
+  --sp-7:  32px;
+  --sp-8:  40px;
+  --sp-9:  44px;
+  --sp-10: 64px;
+  --sp-11: 84px;
+
+  /* ─── Gradients ─────────────────────────────────────────────── */
+  --grad-sky-radial:   radial-gradient(rgb(33,58,143) 0%, rgb(255,255,255) 0%, rgb(226,246,255) 100%);
+  --grad-hero:         radial-gradient(rgb(33,58,143) 0%, rgb(207,235,252) 100%);
+  --grad-menu-overlay: linear-gradient(rgba(33,58,143,0.5), rgba(33,58,143,0.5));
+  --grad-bubble:       radial-gradient(rgb(255,255,255) 0%, rgb(250,253,255) 11%, rgb(234,246,254) 27%, rgb(207,235,252) 47%, rgb(163,218,248) 68%, rgb(87,196,242) 91%, rgb(11,187,239) 100%);
+
+  /* ─── Type family ──────────────────────────────────────────── */
+  --font-sans:    'Montserrat', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  --font-mono:    'Roboto Mono', ui-monospace, SFMono-Regular, monospace;
+  --font-display: 'Sora', 'Montserrat', system-ui, sans-serif; /* Redesign 2026 only */
+}
+
+/* ─── Base typography ───────────────────────────────────────── */
+/* Extracted sizes: 12/14/15/16/18/24/32/40/46/60
+   Weights: 400, 500, 600 (SemiBold), 700 (Bold), 800 (ExtraBold)
+   Line-heights: 1.0, 1.1, 1.2, 1.5                              */
+
+body,
+html {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  color: var(--fg1);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, .h1 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 46px;       /* Desktop Hero CTA title */
+  line-height: 1.2;
+  color: var(--as-blu-navy);
+  margin: 0;
+}
+
+h2, .h2 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 40px;       /* Section titles ("Non hai ancora…") */
+  line-height: 48px;
+  color: var(--as-blu);
+  margin: 0;
+}
+
+h3, .h3 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.2;
+  color: var(--as-blu);
+  margin: 0;
+}
+
+h4, .h4 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+  color: var(--as-blu);
+  margin: 0;
+}
+
+h5, .h5 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.2;
+  color: var(--fg1);
+  margin: 0;
+}
+
+p, .body {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--fg1);
+  margin: 0;
+}
+
+.body-sm {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--fg2);
+}
+
+.label {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--fg1);
+}
+
+.helper {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--fg2);
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: var(--as-blu);
+  text-transform: uppercase;
+}
+
+/* Button label spec: Montserrat Bold 16 / 24 */
+.btn-label {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+}
+
+/* Script-like "Club" appears only inside the locked logo PNG — do NOT
+   re-set script type; it's a logo mark, not a usable webfont. */

@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/Sito%20Corporate.html" }
+  ]
+}
