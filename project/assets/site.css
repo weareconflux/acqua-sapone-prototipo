@@ -22,6 +22,8 @@ a { color: inherit; }
   --display-font: var(--font-sans);
   --palette-accent: var(--as-rosa-deep);
   --palette-accent-light: var(--as-rosa);
+  --palette-accent-fg: #fff;
+  --palette-accent-shadow: 220, 28, 131;
 }
 :root[data-density="compact"] {
   --density-pad-y: 72px;
@@ -30,10 +32,20 @@ a { color: inherit; }
 :root[data-palette="rosa"] {
   --palette-accent: var(--as-rosa-deep);
   --palette-accent-light: var(--as-rosa);
+  --palette-accent-fg: #fff;
+  --palette-accent-shadow: 220, 28, 131;
 }
 :root[data-palette="blu"] {
   --palette-accent: var(--as-blu);
   --palette-accent-light: var(--as-cyan);
+  --palette-accent-fg: #fff;
+  --palette-accent-shadow: 25, 73, 155;
+}
+:root[data-palette="giallo"] {
+  --palette-accent: var(--as-giallo);
+  --palette-accent-light: var(--as-giallo-soft);
+  --palette-accent-fg: var(--as-blu-dark); /* dark text on yellow for WCAG AA */
+  --palette-accent-shadow: 230, 165, 0;
 }
 :root[data-display="sora"] {
   --display-font: 'Sora', var(--font-sans);
@@ -130,15 +142,19 @@ a { color: inherit; }
 .btn:active { transform: translateY(1px); }
 .btn-primary {
   background: var(--palette-accent);
-  color: #fff;
+  color: var(--palette-accent-fg);
 }
 .btn-primary:hover {
   background: var(--as-rosa-deep);
-  box-shadow: 0 8px 20px rgba(220,28,131,0.30);
+  box-shadow: 0 8px 20px rgba(var(--palette-accent-shadow), 0.30);
 }
 :root[data-palette="blu"] .btn-primary:hover {
   background: var(--as-blu-dark);
   box-shadow: 0 8px 20px rgba(25,73,155,0.25);
+}
+:root[data-palette="giallo"] .btn-primary:hover {
+  background: var(--as-giallo-deep);
+  box-shadow: 0 8px 20px rgba(230,165,0,0.30);
 }
 .btn-outline {
   background: transparent;

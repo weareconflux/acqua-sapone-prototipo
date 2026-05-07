@@ -31,6 +31,11 @@
 
   --as-green:          rgb(35, 135, 25);   /* Success / "Terminato" badge */
 
+  --as-giallo:         rgb(255, 195, 0);   /* Accent yellow — sun/gold */
+  --as-giallo-deep:    rgb(230, 165, 0);   /* Pressed/filled yellow variant */
+  --as-giallo-soft:    rgb(255, 235, 145); /* Soft yellow, tags */
+  --as-giallo-50:      rgb(255, 250, 230); /* Yellow surface tint */
+
   /* ─── Neutrals ───────────────────────────────────────────────── */
   --as-white:          rgb(255, 255, 255);
   --as-bg-app:         rgb(234, 239, 241); /* Canvas behind screen frames */
