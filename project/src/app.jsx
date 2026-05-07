@@ -5,7 +5,7 @@ const { useState: useStateRoot, useEffect: useEffectRoot } = React;
 // Default tweakable values (persisted via __edit_mode_set_keys)
 const DEFAULTS = /*EDITMODE-BEGIN*/{
   "hero": "default",
-  "palette": "rosa",
+  "palette": "giallo",
   "density": "comfortable",
   "display": "montserrat"
 }/*EDITMODE-END*/;
